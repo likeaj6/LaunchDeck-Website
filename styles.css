@@ -1,0 +1,10 @@
+#banner {
+    /*height: 33%;*/
+}
+
+#button1 {
+    position: absolute;
+    top: 30%;
+    left: 25%;
+    color: blue;
+}
