@@ -141,7 +141,21 @@
           }
         })
       ;
-
+      $('.ui.form')
+          .form({
+            fields: {
+              email: {
+                identifier : 'email',
+                rules: [
+                  {
+                    type   : 'email',
+                    prompt : 'Please enter a valid e-mail'
+                  }
+                ]
+              }
+            }
+          })
+        ;
       // create sidebar and attach to menu open
       $('.ui.sidebar')
         .sidebar('attach events', '.toc.item')
@@ -206,11 +220,67 @@
     </div>
 
     <div class="ui text container">
-      <h1 class="ui header">
-        LaunchDeck
-      </h1>
-      <h2>Do whatever you want when you want to.</h2>
-      <div class="ui huge orange button">Get Started <i class="right arrow icon"></i></div>
+      <!-- <h1 class="ui header"> -->
+          <img src="images/orange.png" class="ui center large image">
+      <!-- </h1> -->
+        <h2>Community & Resources For Students</h2>
+        <h3>Mailing List</h3>
+        <form class="ui form segment error" id="form" method="get" action="https://script.google.com/macros/s/AKfycbwHVlZnxABv43sUb85QetRYrOugdCrdIkhk1zuLKZwin_rMA3KI/exec" accept-charset="UTF-8">
+          <div class="fields">
+              <div class="five wide field">
+                <input type="text" name="name" placeholder="First Last">
+              </div>
+            <div class="nine wide field">
+              <input type="text" name="email" placeholder="Email">
+            </div>
+          </div>
+          <div class="sixteen ui orange right labeled icon submit button">Submit
+          <i class="send outline icon"></i></div>
+          <div class="ui error message"></div>
+        </form>
+
+        <!-- <div class="ui form success">
+          <div class="field">
+            <input type="email" placeholder="Email">
+          </div>
+          <div class="ui success message">
+            <div class="header">Form Completed</div>
+            <p>You're all signed up for the newsletter.</p>
+          </div>
+          <div class="ui orange right labeled icon submit button">Submit
+          <i class="send outline icon"></i></div>
+
+        </div>
+        <div class="ui form error">
+          <div class="field">
+            <input type="email" placeholder="Email">
+          </div>
+          <div class="ui error message">
+            <div class="header">Action Forbidden</div>
+            <p>You can only sign up for an account once with a given e-mail address.</p>
+          </div>
+          <div type="submit" value="Sign Up" class="ui orange right labeled icon submit button">Submit
+          <i class="send outline icon"></i></div>
+        </div>
+        <form  id="form" method="get" action="https://script.google.com/macros/s/AKfycbxeKTVlTkqSGLIRphBrzACjuWlfmejbPIG7NqBxx-7Us7lnqLw/exec" accept-charset="UTF-8">
+
+
+        <div class="ui action input">
+            <input type="text" placeholder="Name">
+            <input type="text" placeholder="Email">
+            <input class="ui orange right labeled icon button" />
+        </div>
+    </form> -->
+
+      <!-- <div class="ui action input">
+        <input type="text" placeholder="Email address">
+        <button class="ui orange right labeled icon button">
+            Join
+        <i class="send outline icon"></i>
+        </button>
+      </div> -->
+
+      <!-- <div class="ui huge orange button">Join Our Mailinglist <i class="right arrow icon"></i></div> -->
     </div>
 
   </div>
