@@ -1,5 +1,10 @@
-#banner {
-    /*height: 33%;*/
+#logoBanner {
+    /*width: 75%;*/
+    /*position: relative;*/
+    display: block;
+    margin: 0 auto;
+    padding-top: 3%;
+    max-width:50%;
 }
 
 #button1 {
