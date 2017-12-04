@@ -110,8 +110,23 @@
   <script src="semantic/dist/components/sidebar.js"></script>
   <script src="semantic/dist/components/transition.js"></script>
   <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-97701562-1', 'auto');
+      ga('send', 'pageview');
+
+</script>
+  <script>
   $(document)
     .ready(function() {
+        // $("#contactus").click(function(){
+        //
+        //  // show Modal
+        //      $('#contactmodal').modal('show');
+        // });
         $('.message .close')
           .on('click', function() {
             $(this)
@@ -135,6 +150,9 @@
           }
         })
       ;
+      $("#form").bind('ajax:complete', function() {
+
+       });
       $('.ui.form')
           .form({
             fields: {
@@ -170,8 +188,8 @@
       <img src="images/rocket.png">
     </div>
     <a class="active item">Home</a>
-    <a class="item">Upcoming</a>
-    <a class="item">Resources</a>
+    <a class="item" href="./localhackday">Upcoming</a>
+    <a class="item" href="./resources">Resources</a>
     <a href="#projects "class="item">Projects</a>
     <!-- <a class="item">About</a> -->
     <div class="right menu">
@@ -186,8 +204,8 @@
 <!-- Sidebar Menu -->
 <div class="ui vertical orange sidebar menu">
     <a class="active item">Home</a>
-    <a class="item">Upcoming</a>
-    <a class="item">Resources</a>
+    <a class="item" href="./localhackday">Upcoming</a>
+    <a class="item" href="./resources">Resources</a>
     <a href="#projects" class="item">Projects</a>
     <!-- <a class="item">About</a> -->
     <a class="item">Contact</a>
@@ -209,8 +227,8 @@
           <img src="images/rocket.png">
         </div>
         <a class="active item">Home</a>
-        <a class="item">Upcoming</a>
-        <a class="item">Resources</a>
+        <a class="item" href="./localhackday">Upcoming</a>
+        <a class="item" href="./resources">Resources</a>
         <a href="#projects" class="item">Projects</a>
         <!-- <a class="item">About</a> -->
         <div class="right item">
@@ -224,7 +242,7 @@
           Project Funding Deadline
         </div>
         <ul class="list">
-          <li>Please submit your project by 11:59PM, Wednesday 4/25!</li>
+          <li>The deadline for this semester has passed! Please feel free to contact us if you have any questions or issues.</li>
           <!-- <li>Did you know it's been a while?</li> -->
         </ul>
       </div>
@@ -285,7 +303,7 @@
       </div>
       <div class="row">
         <div class="center aligned column">
-          <a class="ui huge button">Contact Us</a>
+          <a class="ui huge button" href="mailto:jjin3@swarthmore.edu" id="contactus">Contact Us</a>
         </div>
       </div>
     </div>
@@ -298,7 +316,7 @@
       <div class="ui dimmer">
         <div class="content">
           <div class="center">
-            <div class="ui inverted button">Learn More</div>
+            <a href="https://www.facebook.com/switchboard.io/?fref=nf"class="ui inverted button">Learn More</a>
           </div>
         </div>
       </div>
@@ -308,12 +326,12 @@
        <img src="images/switchboard.png">
      </div> -->
      <div class="content">
-       <div class="header"><a>Switchboard</a></div>
+       <div class="header"><a href="https://www.facebook.com/switchboard.io/?fref=nf">Switchboard</a></div>
        <div class="meta">
          <a>Michael Piazza '17 & Eric Wang '19</a>
        </div>
        <div class="description">
-         Placeholder.
+         Switchboard is a service that enables Swatties to chat one-on-one and anonymously, entirely via SMS. Send "hello" to <a>1(510) 338-2679</a> to get started and make some new friends.
        </div>
      </div>
      <div class="extra content">
@@ -328,21 +346,43 @@
       <div class="ui dimmer">
         <div class="content">
           <div class="center">
-            <a href="https://goo.gl/forms/6GGiPJ4xIzet6O8y2" class="ui inverted button">Sign Up For the Beta</a>
+            <a href="http://campfireio.com" class="ui inverted button">Learn More</a>
           </div>
         </div>
       </div>
-      <img src="images/gameplan.png">
+      <img src="images/campfire.png">
     </div>
      <div class="content">
-       <div class="header">Gameplan</div>
+       <div class="header">Campfire</div>
        <div class="meta">
          <span>Jason Jin '20</span>
        </div>
        <div class="description">
-         All your events and friends on a single social map, updated real-time.
+         All your events and friends on a single real-time social map.
        </div>
      </div>
+ </div>
+     <div class="card">
+         <div class="blurring dimmable image">
+        <div class="ui dimmer">
+          <div class="content">
+            <div class="center">
+              <a href="" class="ui inverted button">Stay Tuned!</a>
+            </div>
+          </div>
+        </div>
+        <img src="images/campusconnect.png">
+      </div>
+       <div class="content">
+         <div class="header">CampusConnect</div>
+         <div class="meta">
+           <span>Seimi Park '20, Victoria Lin '20, & David Chang '20</span>
+         </div>
+         <div class="description">
+CampusConnect provides students with opportunities for personal growth, career development, and meaningful impact. Our accurate, comprehensive, and user-friendly search engine matches students with job and internship opportunities based on a series of user-generated inputs, from desired location to stipend amount.
+        </div>
+       </div>
+   </div>
      <!-- <div class="extra content">
        <span class="right floated">
          Placeholder
@@ -353,36 +393,17 @@
        </span>
      </div> -->
    </div>
-   <div class="card">
-     <div class="image">
-       <img src="images/white-image.png">
-     </div>
-     <div class="content">
-       <div class="header">Placeholder</div>
-       <div class="meta">
-         <a>Placeholder</a>
-       </div>
-       <div class="description">
-         Placeholder
-       </div>
-     </div>
-     <div class="extra content">
-       <span class="right floated">
-         Placeholder
-       </span>
-       <span>
-         <i class="user icon"></i>
-         Placeholder
-       </span>
-     </div>
-   </div>
- </div>
  </div>
 
   <div class="ui vertical stripe segment">
-    <div class="ui text container">
-      <h3 class="ui center aligned header">Workshops</h3>
-      <p>We hold workshops every other week. These workshops will be dedicated to teaching and practicing mobile and web development.</p>
+      <div class="ui text container">
+          <h3 class="ui center aligned header">Workshops</h3>
+
+      <div>
+    <img class="ui big centered image" src="images/workshop.JPG">
+     </div>
+        <br>
+      <p>We hold workshops every 2-3 weeks. These workshops will be dedicated to teaching and practicing mobile and web development.</p>
       <p style="text-align: center"> The workshops are either instructional or hands-on. </p>
         <li>The instructional workshops will involve potential speakers, professors, or mentors walking through different topics. </li>
         <li>The hands-on workshops, allow students to work on personal projects in a collaborative environment where they can seek advice and help.</li>
@@ -391,12 +412,38 @@
       <h4 class="ui horizontal header divider">
         <a href="#">Announcements</a>
       </h4>
-      <h3 class="ui header">Congrats to SwitchBoard by Michael Piazza and Eric Wang for winning SwatTank!</h3>
+      <h3 class="ui center aligned header">Congrats to SwitchBoard by Michael Piazza and Eric Wang for winning SwatTank!</h3>
       <p></p>
-      <a class="ui large button">Read More</a>
+      <!-- <a class="ui large button">Read More</a> -->
     </div>
 </div>
+<div class="ui modal" id="contactmodal">
+  <div class="header">Contact Us</div>
+  <i class="close icon" id="closemodal"></i>
 
+  <div class="content">
+      <form class="ui form segment error"accept-charset="UTF-8">
+          <div class="container">
+                <div class="fields">
+                    <div class="five wide field">
+                      <input type="text" name="name" placeholder="First Last">
+                    </div>
+                  <div class="nine wide field">
+                    <input type="text" name="email" placeholder="Email">
+                  </div>
+              </div>
+            </div>
+            <div class="fifteen wide field">
+              <label>Message</label>
+              <textarea></textarea>
+          </div>
+          <div style="display:block"class="ui orange right labeled icon submit button">Submit
+          <i class="send outline icon"></i></div>
+          <div class="ui error message"></div>
+          <div class="ui success message"></div>
+      </form>
+  </div>
+</div>
   <!-- <div class="ui vertical stripe segment">
     <div class="ui text container">
       <h3 class="ui header">Check out Swarthmore Eventspace by Jason Jin, William Lee, Bunn Buraparat, and Won Chung</h3>
@@ -419,8 +466,7 @@
         <div class="ui inverted section divider"></div>
       <img src="images/rocket.png" class="ui centered tiny image">
       <div class="ui horizontal inverted small divided link list">
-            <a href="#" class="item">Facebook</a>
-            <a href="#" class="item">Twitter</a>
+
         <!-- <div class="three wide column">
           <h4 class="ui inverted header">Services</h4>
           <div class="ui inverted link list">
